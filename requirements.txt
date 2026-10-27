@@ -1,0 +1,2 @@
+# Flask runs the portfolio backend and serves its pages and API routes.
+Flask==3.0.3

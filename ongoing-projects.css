@@ -1,0 +1,78 @@
+/* Shared page width and title spacing for the ongoing-project view. */
+.catalog-page{
+    width:min(1180px, 100%);
+    margin:0 auto;
+    padding:156px 40px 100px;
+}
+
+.catalog-page .section-title{
+    margin-bottom:44px;
+}
+
+.catalog-page .section-title p{
+    margin-top:20px;
+}
+
+.project-navbar .btn-outline{
+    flex:0 0 auto;
+}
+
+/* Main project content: summary, details, and feature list. */
+.ongoing-project-card{
+    display:grid;
+    grid-template-columns:minmax(0, .8fr) minmax(0, 1.2fr);
+    gap:24px 48px;
+    padding:clamp(24px, 5vw, 48px);
+}
+
+/* Project heading and descriptive content hierarchy. */
+.ongoing-heading h3{
+    margin-bottom:12px;
+    color:var(--primary);
+    font-size:1.8rem;
+}
+
+.ongoing-details h4{
+    margin-bottom:8px;
+    color:var(--primary);
+}
+
+.ongoing-details p{
+    margin-bottom:20px;
+}
+
+.ongoing-details ul{
+    display:grid;
+    gap:8px;
+    padding-left:20px;
+    list-style:disc;
+}
+
+/* Keep project actions across the full card width. */
+.ongoing-links{
+    display:flex;
+    grid-column:1 / -1;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+/* Stack the project content and actions on smaller screens. */
+@media(max-width:768px){
+    .catalog-page{
+        padding:120px 6% 70px;
+    }
+
+    .ongoing-project-card{
+        grid-template-columns:minmax(0, 1fr);
+        gap:24px;
+        padding:24px;
+    }
+
+    .ongoing-links{
+        grid-column:auto;
+    }
+
+    .ongoing-links a{
+        flex:1 1 150px;
+    }
+}
